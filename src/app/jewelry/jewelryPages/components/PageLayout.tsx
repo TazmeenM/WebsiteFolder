@@ -13,9 +13,9 @@ export default function PageLayout({images, productName, productDescription}: Pa
   return (
     <>
       <Navbar></Navbar>
-      <div className = "pl-4">  
-        <Description productName = {productName} productDescription = {productDescription}></Description>
+      <div className = "pl-8 pt-4 flex flex-row gap-20">  
         <ImagesDisplay images = {images}></ImagesDisplay>
+        <Description productName = {productName} productDescription = {productDescription}></Description>
       </div>
     </>
   );
