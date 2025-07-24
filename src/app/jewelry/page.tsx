@@ -1,9 +1,8 @@
 import Image from "next/image";
-import Jewelry from "./jewelry";
 import Navbar from "../components/Navbar"
 import JewelryGrid from "./components/JewelryGrid";
 
-export default function JP() {
+export default function Jewelry() {
   return (
     <div>
       <Navbar></Navbar>
