@@ -41,4 +41,8 @@ body {
     .navbar a:hover{
         @apply bg-white text-[var(--background-blue)]
     }
+
+    .dark-blue-links{
+      @apply text-[var(--background-blue)]
+    }
 }

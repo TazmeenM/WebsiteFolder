@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from 'react';
 import { Col, Divider, Row } from 'antd';
 import Card from "./Card"
+import "../../globals.css";
 
 //Importing the images
 import greyPearlBracelet from "../images/greyPearlBracelet.jpg"
@@ -12,9 +13,8 @@ const style: React.CSSProperties = {
 };
 
 const images = [
-  {src: greyPearlBracelet, alt: "Grey Pearl Bracelet", title: "Grey Pearl Bracelet"},
-  {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet"},
-  {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet"}
+  {src: greyPearlBracelet, alt: "Grey Pearl Bracelet", title: "Grey Pearl Bracelet", pageLink: "../jewelry/jewelryPages/greyPearlBracelet"},
+  {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet", pageLink: "../jewelry/jewelryPages/creamPearlBracelet"}
 ]
 
 const JewelryGrid: React.FC = () => {
@@ -25,13 +25,13 @@ const JewelryGrid: React.FC = () => {
         <div key={i}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title}></Card>
+              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title} pageLink = {images[i].pageLink}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title}></Card>
+              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title} pageLink = {images[i + 1].pageLink}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title}></Card>
+              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title} pageLink = {images[i + 2].pageLink}></Card>
             </Col>
           </Row>
         </div>
@@ -42,7 +42,7 @@ const JewelryGrid: React.FC = () => {
         <div key={images.length}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[images.length].src} imageAlt = {images[images.length].alt} title = {images[images.length].title}></Card>
+              <Card imageSource = {images[images.length - 1].src} imageAlt = {images[images.length - 1].alt} title = {images[images.length - 1].title} pageLink = {images[images.length - 1].pageLink}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
             </Col>
@@ -55,13 +55,13 @@ const JewelryGrid: React.FC = () => {
 
     else if (images.length % 3 == 2){
       productRows.push(
-        <div key={images.length - 1}>
-          <Row gutter={20}>
+        <div key={images.length - 2}>
+          <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[images.length - 1].src} imageAlt = {images[images.length - 1].alt} title = {images[images.length - 1].title}></Card>
+              <Card imageSource = {images[images.length - 2].src} imageAlt = {images[images.length - 2].alt} title = {images[images.length - 2].title} pageLink = {images[images.length - 2].pageLink}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[images.length].src} imageAlt = {images[images.length].alt} title = {images[images.length].title}></Card>
+              <Card imageSource = {images[images.length - 1].src} imageAlt = {images[images.length - 1].alt} title = {images[images.length - 1].title} pageLink = {images[images.length - 1].pageLink}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
             </Col>
@@ -76,13 +76,13 @@ const JewelryGrid: React.FC = () => {
         <div key={i}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title}></Card>
+              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title}  pageLink = {images[i].pageLink}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title}></Card>
+              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title}  pageLink = {images[i + 1].pageLink}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title}></Card>
+              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title}  pageLink = {images[i + 2].pageLink}></Card>
             </Col>
           </Row>
         </div>
