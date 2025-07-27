@@ -8,7 +8,16 @@ export default function Home() {
   return (
     <div>
       <Navbar></Navbar>
-      <CarouselBuilder></CarouselBuilder>
+      <div className ="flex gap-10">
+        <div>
+          <h1 className = "heading">About Me</h1>
+          <p>An artist creating pieces coming to mind. I've been making jewelry since I was in grade 5, and although I barely wear my pieces, I take great pleasure in unleashing my creativity by creating them.</p>
+        </div>  
+        <div className = "w-1/2">
+          <h1>Click the arrows to go through some of the pieces I've made:</h1>
+          <CarouselBuilder></CarouselBuilder>
+        </div>
+      </div>  
     </div>
   );
 }

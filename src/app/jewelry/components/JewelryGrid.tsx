@@ -7,6 +7,10 @@ import "../../globals.css";
 //Importing the images
 import greyPearlBracelet from "../images/greyPearlBracelet.jpg"
 import creamPearlBracelet from "../images/creamPearlBracelet.jpg"
+import creamPearlBraceletWithChains from "../images/creamPearlBraceletWithChains.jpg";
+import blueGlassBracelet from "../images/blueGlassBracelet.jpg";
+import pinkGlassBracelet from "../images/pinkGlassBracelet.jpg";
+
 
 const style: React.CSSProperties = { 
     background: 'transparent', padding: '12px 0', color: '#ffffff'
@@ -14,7 +18,10 @@ const style: React.CSSProperties = {
 
 const images = [
   {src: greyPearlBracelet, alt: "Grey Pearl Bracelet", title: "Grey Pearl Bracelet", pageLink: "../jewelry/jewelryPages/greyPearlBracelet"},
-  {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet", pageLink: "../jewelry/jewelryPages/creamPearlBracelet"}
+  {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet", pageLink: "../jewelry/jewelryPages/creamPearlBracelet"},
+  {src: creamPearlBraceletWithChains, alt: "Cream Pearl Bracelet With Chains", title: "Cream Pearl Bracelet With Chains", pageLink: "../jewelry/jewelryPages/creamPearlBraceletWithChains"},
+  {src: blueGlassBracelet, alt: "Blue Glass Bracelet", title: "Blue Glass Bracelet", pageLink: "../jewelry/jewelryPages/blueGlassBracelet"},
+  {src: pinkGlassBracelet, alt: "Pink Glass Bracelet", title: "Pink Glass Bracelet", pageLink: "../jewelry/jewelryPages/pinkGlassBracelet"}
 ]
 
 const JewelryGrid: React.FC = () => {

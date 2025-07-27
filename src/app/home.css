@@ -45,4 +45,8 @@ body {
     .dark-blue-links{
       @apply text-[var(--background-blue)]
     }
+
+    .heading{
+      @apply text-[24px]
+    }
 }

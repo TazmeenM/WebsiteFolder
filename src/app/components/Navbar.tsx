@@ -5,8 +5,7 @@ export default function Navbar(){
   return (
     <div className = "navbar">
       <Link href = "/">Home</Link>
-      <Link href = "../jewelry">Jewelry</Link>
-      <Link href = "paintings.html">Paintings</Link>
+      <Link href = "/jewelry">Jewelry</Link>
     </div>
   );
 }
