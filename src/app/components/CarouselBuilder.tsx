@@ -13,7 +13,7 @@ const contentStyle: React.CSSProperties = {
   color: '#fff',
   lineHeight: '25vh',
   textAlign: 'center',
-  background: '#0d0054',
+  background: 'transparent',
   position: 'relative',
 };
 
