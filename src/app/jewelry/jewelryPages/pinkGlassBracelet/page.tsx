@@ -4,11 +4,11 @@ import Navbar from "../../../components/Navbar"
 import ImagesDisplay from "../components/ImagesDisplay"
 import Description from "../components/Description"
 import PageLayout from "../components/PageLayout"
-import greyPearlBracelet from "../../images/greyPearlBracelet.jpg"
+import pinkGlassBracelet from "../../images/pinkGlassBracelet.jpg"
 
 const images = [
-  {imageSource: greyPearlBracelet, imageAlt: "Grey Pearl Bracelet"},
-  {imageSource: greyPearlBracelet, imageAlt: "Grey Pearl Bracelet"}
+  {imageSource: pinkGlassBracelet, imageAlt: "Grey Pearl Bracelet"},
+  {imageSource: pinkGlassBracelet, imageAlt: "Grey Pearl Bracelet"}
 ]
 
 const productInformation = {
@@ -16,7 +16,7 @@ const productInformation = {
   productDescription: "A grey pearl bracelet"
 }
 
-export default function GreyPearlBracelet() {
+export default function pinkGlassBracelet() {
   return (
     <>
       <PageLayout images = {images} productName = {productInformation.productName} productDescription = {productInformation.productDescription}></PageLayout>
