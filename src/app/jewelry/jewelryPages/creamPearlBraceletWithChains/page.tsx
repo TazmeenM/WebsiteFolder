@@ -4,19 +4,19 @@ import Navbar from "../../../components/Navbar"
 import ImagesDisplay from "../components/ImagesDisplay"
 import Description from "../components/Description"
 import PageLayout from "../components/PageLayout"
-import creamPearlBracelet from "../../images/creamPearlBracelet.jpg"
+import creamPearlBraceletWithChains from "../../images/creamPearlBraceletWuthChains.jpg"
 
 const images = [
-  {imageSource: creamPearlBracelet, imageAlt: "Cream Pearl Bracelet"},
-  {imageSource: creamPearlBracelet, imageAlt: "Cream Pearl Bracelet"}
+  {imageSource: creamPearlBraceletWithChains, imageAlt: "Cream Pearl Bracelet With Chains"},
+  {imageSource: creamPearlBraceletWithChains, imageAlt: "Cream Pearl Bracelet With Chains"}
 ]
 
 const productInformation = {
-  productName: "Cream Pearl Bracelet", 
-  productDescription: "A cream pearl bracelet"
+  productName: "Cream Pearl Bracelet With Chains", 
+  productDescription: "A cream pearl bracelet with chains"
 }
 
-export default function CreamPearlBracelet() {
+export default function CreamPearlBraceletWithChains() {
   return (
     <>
       <PageLayout images = {images} productName = {productInformation.productName} productDescription = {productInformation.productDescription}></PageLayout>
