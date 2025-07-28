@@ -13,19 +13,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer components{
-    :root {
-    --background-blue: #0d0054;
-    --navbar-link-font-size: 18px;
-    }
-    .navbar{
-        @apply bg-[var(--background-blue)] space-x-20 px-4 py-8;
-        font-size: var(--navbar-link-font-size);
-    }
-    .navbar a{
-        @apply text-white px-16 py-8;
-    }
-    .navbar a:hover{
-        @apply bg-white text-[var(--background-blue)]
-    }
+.navbar{
+    @apply bg-[var(--background-blue)] space-x-20 px-4 py-8;
+    font-size: var(--navbar-link-font-size);
+}
+.navbar a{
+    @apply text-white px-16 py-8;
+}
+.navbar a:hover{
+    @apply bg-white text-[var(--background-blue)]
 }

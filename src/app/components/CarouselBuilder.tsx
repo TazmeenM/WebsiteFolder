@@ -13,7 +13,6 @@ const contentStyle: React.CSSProperties = {
   color: '#fff',
   lineHeight: '25vh',
   textAlign: 'center',
-  background: 'transparent',
   position: 'relative',
 };
 
@@ -22,16 +21,17 @@ const carouselStyle: React.CSSProperties = {
   width: '100%',
   height: '50%',
   overflow: 'hidden',
+  background: '#0d0054',
 }
 
 const CarouselBuilder: React.FC = () => (
   <>
-    <Carousel style = {carouselStyle} className = "carousel apply bg-[var(--background-blue)]" arrows infinite={true}>
+    <Carousel style = {carouselStyle} arrows infinite={true}>
       <div>
-        <h3 style={contentStyle}><Image src = {bracelets} alt = "Bracelets" fill style ={{objectFit: "contain"}}></Image></h3>
+        <h3 style={contentStyle}><a href = "/jewelry"><Image src = {bracelets} alt = "Bracelets" fill style ={{objectFit: "contain"}}></Image></a></h3>
       </div>
       <div>
-        <h3 style={contentStyle}><Image src = {greyPearlBracelet} alt = "Grey Pearl Bracelet" fill style ={{objectFit: "contain"}}></Image></h3>
+        <h3 style={contentStyle}><a href = "../jewelry/jewelryPages/greyPearlBracelet"><Image src = {greyPearlBracelet} alt = "Grey Pearl Bracelet" fill style ={{objectFit: "contain"}}></Image></a></h3>
       </div>
       <div>
         <h3 style={contentStyle}><Image src = {creamPearlBracelet} alt = "Cream Pearl Bracelet" fill style ={{objectFit: "contain"}}></Image></h3>

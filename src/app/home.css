@@ -12,17 +12,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0d0054;
-    --foreground: #ffffff;
-  }
-}
-
 body {
   background: var(--background);
-  color: var(--background);
+  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+  color: var(--foreground);
 }
 
 @layer components{
@@ -31,19 +28,9 @@ body {
     --text-white: #ededed;
     --link-font-size: 18px;
     }
-    .navbar{
-        @apply bg-[var(--background-blue)] space-x-20 px-4 py-8;
-        font-size: var(--link-font-size);
-    }
-    .navbar a{
-        @apply text-white px-16 py-8;
-    }
-    .navbar a:hover{
-        @apply bg-white text-[var(--background-blue)]
-    }
 
-    .dark-blue-links{
-      @apply text-[var(--background-blue)]
+    a{
+      @apply text-[var(--background)] px-16 py-8;
     }
 
     .heading{

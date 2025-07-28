@@ -3,7 +3,6 @@ import React from 'react';
 import { Col, Divider, Row } from 'antd';
 import Card from "./Card"
 import "../../globals.css";
-import "./jewelry.css"
 
 //Importing the images
 import greyPearlBracelet from "../images/greyPearlBracelet.jpg"
@@ -18,11 +17,11 @@ const style: React.CSSProperties = {
 };
 
 const images = [
-  {src: greyPearlBracelet, alt: "Grey Pearl Bracelet", title: "Grey Pearl Bracelet", pageLink: "../jewelry/jewelryPages/greyPearlBracelet"},
-  {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet", pageLink: "../jewelry/jewelryPages/creamPearlBracelet"},
-  {src: creamPearlBraceletWithChains, alt: "Cream Pearl Bracelet With Chains", title: "Cream Pearl Bracelet With Chains", pageLink: "../jewelry/jewelryPages/creamPearlBraceletWithChains"},
-  {src: blueGlassBracelet, alt: "Blue Glass Bracelet", title: "Blue Glass Bracelet", pageLink: "../jewelry/jewelryPages/blueGlassBracelet"},
-  {src: pinkGlassBracelet, alt: "Pink Glass Bracelet", title: "Pink Glass Bracelet", pageLink: "../jewelry/jewelryPages/pinkGlassBracelet"}
+  {src: greyPearlBracelet, alt: "Grey Pearl Bracelet", title: "Grey Pearl Bracelet", pageLink: "../jewelry/jewelryPages/greyPearlBracelet", price: 15.00},
+  {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet", pageLink: "../jewelry/jewelryPages/creamPearlBracelet", price: 15.00} ,
+  {src: creamPearlBraceletWithChains, alt: "Cream Pearl Bracelet With Chains", title: "Cream Pearl Bracelet With Chains", pageLink: "../jewelry/jewelryPages/creamPearlBraceletWithChains", price: 15.00},
+  {src: blueGlassBracelet, alt: "Blue Glass Bracelet", title: "Blue Glass Bracelet", pageLink: "../jewelry/jewelryPages/blueGlassBracelet", price: 10.00},
+  {src: pinkGlassBracelet, alt: "Pink Glass Bracelet", title: "Pink Glass Bracelet", pageLink: "../jewelry/jewelryPages/pinkGlassBracelet", price: 10.00}
 ]
 
 const JewelryGrid: React.FC = () => {
@@ -33,13 +32,13 @@ const JewelryGrid: React.FC = () => {
         <div key={i}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title} pageLink = {images[i].pageLink}></Card>
+              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title} pageLink = {images[i].pageLink} price = {images[i].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title} pageLink = {images[i + 1].pageLink}></Card>
+              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title} pageLink = {images[i + 1].pageLink} price = {images[i + 1].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title} pageLink = {images[i + 2].pageLink}></Card>
+              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title} pageLink = {images[i + 2].pageLink} price = {images[i + 2].price}></Card>
             </Col>
           </Row>
         </div>
@@ -50,7 +49,7 @@ const JewelryGrid: React.FC = () => {
         <div key={images.length}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[images.length - 1].src} imageAlt = {images[images.length - 1].alt} title = {images[images.length - 1].title} pageLink = {images[images.length - 1].pageLink}></Card>
+              <Card imageSource = {images[images.length - 1].src} imageAlt = {images[images.length - 1].alt} title = {images[images.length - 1].title} pageLink = {images[images.length - 1].pageLink} price = {images[images.length - 1].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
             </Col>
@@ -66,10 +65,10 @@ const JewelryGrid: React.FC = () => {
         <div key={images.length - 2}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[images.length - 2].src} imageAlt = {images[images.length - 2].alt} title = {images[images.length - 2].title} pageLink = {images[images.length - 2].pageLink}></Card>
+              <Card imageSource = {images[images.length - 2].src} imageAlt = {images[images.length - 2].alt} title = {images[images.length - 2].title} pageLink = {images[images.length - 2].pageLink} price = {images[images.length - 2].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[images.length - 1].src} imageAlt = {images[images.length - 1].alt} title = {images[images.length - 1].title} pageLink = {images[images.length - 1].pageLink}></Card>
+              <Card imageSource = {images[images.length - 1].src} imageAlt = {images[images.length - 1].alt} title = {images[images.length - 1].title} pageLink = {images[images.length - 1].pageLink} price = {images[images.length - 1].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
             </Col>

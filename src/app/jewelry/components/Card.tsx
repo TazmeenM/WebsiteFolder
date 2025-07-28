@@ -15,6 +15,7 @@ interface cardProperties{
 
     //For the description
     title: string
+    price: number
 }
 
 const style: React.CSSProperties = { 
@@ -22,10 +23,13 @@ const style: React.CSSProperties = {
 };
 
 
-const Card: React.FC<cardProperties> = ({imageSource, imageAlt, pageLink, title}) => (
+const Card: React.FC<cardProperties> = ({imageSource, imageAlt, pageLink, title, price}) => (
     <div style={style} className = "justify-center">
-        <a href = {pageLink}><Image src={imageSource} alt = {imageAlt} width = "150" height = "150"></Image></a>
-        <p className = "justify-center"><a href = {pageLink} className = "dark-blue-link">{title}</a></p>
+        <a href = {pageLink} className = "justify-center">
+            <Image src={imageSource} alt = {imageAlt} width = "150" height = "150"></Image>
+            <p className = "justify-center">{title}</p>
+            <p className = "justify-center">${price.toFixed(2)}</p>
+        </a>
     </div>
 );
 
