@@ -10,10 +10,10 @@ export default function Home() {
       <Navbar></Navbar>
       <div className ="flex gap-10">
         <div>
-          <h1 className = "text-blue">About Me</h1>
+          <h1 className = "text-black">About Me</h1>
           <p>I am an artist creating pieces coming to mind. I've been making jewelry since I was in grade 5, and although I barely wear my pieces, I take great pleasure in unleashing my creativity by creating them.</p>
         </div>  
-        <div className = "w-1/2">
+        <div className = "w-1/2 text-black">
           <h1>Click the arrows to go through some of the pieces I've made:</h1>
           <CarouselBuilder></CarouselBuilder>
         </div>
