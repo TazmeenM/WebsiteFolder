@@ -83,13 +83,13 @@ const JewelryGrid: React.FC = () => {
         <div key={i}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title}  pageLink = {images[i].pageLink}></Card>
+              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title}  pageLink = {images[i].pageLink} price = {images[i].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title}  pageLink = {images[i + 1].pageLink}></Card>
+              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title}  pageLink = {images[i + 1].pageLink} price = {images[i + 1].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title}  pageLink = {images[i + 2].pageLink}></Card>
+              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title}  pageLink = {images[i + 2].pageLink} price = {images[i + 2].price}></Card>
             </Col>
           </Row>
         </div>

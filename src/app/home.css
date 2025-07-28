@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #0d0054;
+  --background-blue: #0d0054;
 }
 
 @theme inline {
@@ -24,16 +25,19 @@ a{
 
 @layer components{
     :root {
-    --background-blue: #0d0054;
     --text-white: #ededed;
     --link-font-size: 18px;
     }
 
     a{
-      @apply text-[var(--background)] px-16 py-8;
+      @apply text-[var(--background-blue)] px-16 py-8;
     }
 
     .heading{
       @apply text-[24px]
+    }
+
+    .carouselContainer{
+      @apply w-1/2 text-white bg-[var(--background-blue)];
     }
 }
