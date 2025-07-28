@@ -3,6 +3,7 @@ import React from 'react';
 import { Col, Divider, Row } from 'antd';
 import Card from "./Card"
 import "../../globals.css";
+import "./jewelry.css"
 
 //Importing the images
 import greyPearlBracelet from "../images/greyPearlBracelet.jpg"
