@@ -16,7 +16,7 @@ const productInformation = {
   productDescription: "A Blue Glass Bracelet"
 }
 
-export default function blueGlassBracelet() {
+export default function BlueGlassBracelet() {
   return (
     <>
       <PageLayout images = {images} productName = {productInformation.productName} productDescription = {productInformation.productDescription}></PageLayout>
