@@ -4,7 +4,7 @@ import Navbar from "../../../components/Navbar"
 import ImagesDisplay from "../components/ImagesDisplay"
 import Description from "../components/Description"
 import PageLayout from "../components/PageLayout"
-import creamPearlBraceletWithChains from "../../images/creamPearlBraceletWuthChains.jpg"
+import creamPearlBraceletWithChains from "../../images/creamPearlBraceletWithChains.jpg"
 
 const images = [
   {imageSource: creamPearlBraceletWithChains, imageAlt: "Cream Pearl Bracelet With Chains"},
