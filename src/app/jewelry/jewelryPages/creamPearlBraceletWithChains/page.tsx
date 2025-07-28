@@ -13,7 +13,7 @@ const images = [
 
 const productInformation = {
   productName: "Cream Pearl Bracelet", 
-  productDescription: "A cream pearl bracelet"
+  productDescription: "Cream pearl bracelet"
 }
 
 export default function CreamPearlBracelet() {
