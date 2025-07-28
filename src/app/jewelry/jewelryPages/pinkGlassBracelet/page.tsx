@@ -7,13 +7,13 @@ import PageLayout from "../components/PageLayout"
 import pinkGlassBracelet from "../../images/pinkGlassBracelet.jpg"
 
 const images = [
-  {imageSource: pinkGlassBracelet, imageAlt: "Grey Pearl Bracelet"},
-  {imageSource: pinkGlassBracelet, imageAlt: "Grey Pearl Bracelet"}
+  {imageSource: pinkGlassBracelet, imageAlt: "Pink Glass Bracelet"},
+  {imageSource: pinkGlassBracelet, imageAlt: "Pink Glass Bracelet"}
 ]
 
 const productInformation = {
-  productName: "Grey Pearl Bracelet", 
-  productDescription: "A grey pearl bracelet"
+  productName: "Pink Glass Bracelet", 
+  productDescription: "A Pink Glass Bracelet"
 }
 
 export default function pinkGlassBracelet() {
