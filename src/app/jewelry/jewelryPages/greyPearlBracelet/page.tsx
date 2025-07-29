@@ -6,7 +6,6 @@ import Description from "../components/Description"
 import PageLayout from "../components/PageLayout"
 import greyPearlBracelet from "../../images/greyPearlBracelet.jpg"
 import greyPearlBracelet2 from "../../images/greyPearlBracelet2.jpg"
-import ContactInformation from "@/app/components/ContactInformation";
 import "../jewelryPages.css";
 
 const images = [
@@ -23,7 +22,6 @@ export default function GreyPearlBracelet() {
   return (
     <>
       <PageLayout images = {images} productName = {productInformation.productName} productDescription = {productInformation.productDescription}></PageLayout>
-      <ContactInformation></ContactInformation>
     </>
   );
 }

@@ -5,7 +5,6 @@ import ImagesDisplay from "../components/ImagesDisplay"
 import Description from "../components/Description"
 import PageLayout from "../components/PageLayout"
 import creamPearlBraceletWithChains from "../../images/creamPearlBraceletWithChains.jpg"
-import ContactInformation from "@/app/components/ContactInformation";
 import "../jewelryPages.css";
 
 const images = [
@@ -22,7 +21,6 @@ export default function CreamPearlBraceletWithChains() {
   return (
     <>
       <PageLayout images = {images} productName = {productInformation.productName} productDescription = {productInformation.productDescription}></PageLayout>
-      <ContactInformation></ContactInformation>
     </>
   );
 }

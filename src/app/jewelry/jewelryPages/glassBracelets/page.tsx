@@ -6,7 +6,6 @@ import Description from "../components/Description"
 import PageLayout from "../components/PageLayout"
 import blueGlassBracelet from "../../images/blueGlassBracelet.jpg"
 import pinkGlassBracelet from "../../images/pinkGlassBracelet.jpg"
-import ContactInformation from "@/app/components/ContactInformation";
 import "../jewelryPages.css";
 
 const images = [
@@ -23,7 +22,6 @@ export default function GlassBracelets() {
   return (
     <>
       <PageLayout images = {images} productName = {productInformation.productName} productDescription = {productInformation.productDescription}></PageLayout>
-      <ContactInformation></ContactInformation>
     </>
   );
 }
