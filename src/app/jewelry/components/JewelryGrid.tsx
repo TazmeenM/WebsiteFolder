@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from 'react';
 import { Col, Divider, Row } from 'antd';
 import Card from "./Card"
@@ -16,40 +16,45 @@ const style: React.CSSProperties = {
     background: 'transparent', padding: '12px 0', color: '#ffffff'
 };
 
-const images = [
-  {src: greyPearlBracelet, alt: "Grey Pearl Bracelet", title: "Grey Pearl Bracelet", pageLink: "../jewelry/jewelryPages/greyPearlBracelet", price: 15.00},
-  {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet", pageLink: "../jewelry/jewelryPages/creamPearlBracelet", price: 15.00} ,
-  {src: creamPearlBraceletWithChains, alt: "Cream Pearl Bracelet With Chains", title: "Cream Pearl Bracelet With Chains", pageLink: "../jewelry/jewelryPages/creamPearlBraceletWithChains", price: 15.00},
-  {src: blueGlassBracelet, alt: "Blue Glass Bracelet", title: "Blue Glass Bracelet", pageLink: "../jewelry/jewelryPages/blueGlassBracelet", price: 10.00},
-  {src: pinkGlassBracelet, alt: "Pink Glass Bracelet", title: "Pink Glass Bracelet", pageLink: "../jewelry/jewelryPages/pinkGlassBracelet", price: 10.00}
-]
+interface productInformation{
+    //For the image
+    src: string | StaticImageData;
+    alt: string
+    title: string
+    pageLink: string
+    price: number
+}
 
-const JewelryGrid: React.FC = () => {
+interface jewelryGridProps{
+  products: productInformation[];
+}
+
+const JewelryGrid: React.FC<jewelryGridProps> = ({products}) => {
   const productRows = [];
-  if (images.length % 3 != 0){
-    for (let i = 0; i < images.length/3 - 1; i+=3){
+  if (products.length % 3 != 0){
+    for (let i = 0; i < products.length/3 - 1; i+=3){
       productRows.push(
         <div key={i}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title} pageLink = {images[i].pageLink} price = {images[i].price}></Card>
+              <Card imageSource = {products[i].src} imageAlt = {products[i].alt} title = {products[i].title} pageLink = {products[i].pageLink} price = {products[i].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title} pageLink = {images[i + 1].pageLink} price = {images[i + 1].price}></Card>
+              <Card imageSource = {products[i + 1].src} imageAlt = {products[i + 1].alt} title = {products[i + 1].title} pageLink = {products[i + 1].pageLink} price = {products[i + 1].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title} pageLink = {images[i + 2].pageLink} price = {images[i + 2].price}></Card>
+              <Card imageSource = {products[i + 2].src} imageAlt = {products[i + 2].alt} title = {products[i + 2].title} pageLink = {products[i + 2].pageLink} price = {products[i + 2].price}></Card>
             </Col>
           </Row>
         </div>
       )
     }
-    if (images.length % 3 == 1){
+    if (products.length % 3 == 1){
       productRows.push(
-        <div key={images.length}>
+        <div key={products.length}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[images.length - 1].src} imageAlt = {images[images.length - 1].alt} title = {images[images.length - 1].title} pageLink = {images[images.length - 1].pageLink} price = {images[images.length - 1].price}></Card>
+              <Card imageSource = {products[products.length - 1].src} imageAlt = {products[products.length - 1].alt} title = {products[products.length - 1].title} pageLink = {products[products.length - 1].pageLink} price = {products[products.length - 1].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
             </Col>
@@ -60,15 +65,15 @@ const JewelryGrid: React.FC = () => {
       )
     }
 
-    else if (images.length % 3 == 2){
+    else if (products.length % 3 == 2){
       productRows.push(
-        <div key={images.length - 2}>
+        <div key={products.length - 2}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[images.length - 2].src} imageAlt = {images[images.length - 2].alt} title = {images[images.length - 2].title} pageLink = {images[images.length - 2].pageLink} price = {images[images.length - 2].price}></Card>
+              <Card imageSource = {products[products.length - 2].src} imageAlt = {products[products.length - 2].alt} title = {products[products.length - 2].title} pageLink = {products[products.length - 2].pageLink} price = {products[products.length - 2].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[images.length - 1].src} imageAlt = {images[images.length - 1].alt} title = {images[images.length - 1].title} pageLink = {images[images.length - 1].pageLink} price = {images[images.length - 1].price}></Card>
+              <Card imageSource = {products[products.length - 1].src} imageAlt = {products[products.length - 1].alt} title = {products[products.length - 1].title} pageLink = {products[products.length - 1].pageLink} price = {products[products.length - 1].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
             </Col>
@@ -78,18 +83,18 @@ const JewelryGrid: React.FC = () => {
     }
   }
   else{
-    for (let i = 0; i < images.length/3; i+=3){
+    for (let i = 0; i < products.length/3; i+=3){
       productRows.push(
         <div key={i}>
           <Row gutter={20} justify = "end">
             <Col className="name" span={4}>
-              <Card imageSource = {images[i].src} imageAlt = {images[i].alt} title = {images[i].title}  pageLink = {images[i].pageLink} price = {images[i].price}></Card>
+              <Card imageSource = {products[i].src} imageAlt = {products[i].alt} title = {products[i].title}  pageLink = {products[i].pageLink} price = {products[i].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 1].src} imageAlt = {images[i + 1].alt} title = {images[i + 1].title}  pageLink = {images[i + 1].pageLink} price = {images[i + 1].price}></Card>
+              <Card imageSource = {products[i + 1].src} imageAlt = {products[i + 1].alt} title = {products[i + 1].title}  pageLink = {products[i + 1].pageLink} price = {products[i + 1].price}></Card>
             </Col>
             <Col className="gutter-row" span={4}>
-              <Card imageSource = {images[i + 2].src} imageAlt = {images[i + 2].alt} title = {images[i + 2].title}  pageLink = {images[i + 2].pageLink} price = {images[i + 2].price}></Card>
+              <Card imageSource = {products[i + 2].src} imageAlt = {products[i + 2].alt} title = {products[i + 2].title}  pageLink = {products[i + 2].pageLink} price = {products[i + 2].price}></Card>
             </Col>
           </Row>
         </div>

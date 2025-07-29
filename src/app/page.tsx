@@ -1,3 +1,4 @@
+import '@ant-design/v5-patch-for-react-19';
 import Image from "next/image";
 import Hello from "./components/Hello";
 import CarouselBuilder from "./components/CarouselBuilder";
