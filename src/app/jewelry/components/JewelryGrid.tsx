@@ -13,7 +13,7 @@ import pinkGlassBracelet from "../images/pinkGlassBracelet.jpg";
 
 
 const style: React.CSSProperties = { 
-    background: 'transparent', padding: '12px 0', color: '#ffffff'
+    background: 'transparent', padding: '12px', color: '#ffffff'
 };
 
 interface productInformation{
@@ -36,13 +36,13 @@ const JewelryGrid: React.FC<jewelryGridProps> = ({products}) => {
       productRows.push(
         <div key={i}>
           <Row gutter={20} justify = "end">
-            <Col className="name" span={4}>
+            <Col className="name" span={10}>
               <Card imageSource = {products[i].src} imageAlt = {products[i].alt} title = {products[i].title} pageLink = {products[i].pageLink} price = {products[i].price}></Card>
             </Col>
-            <Col className="gutter-row" span={4}>
+            <Col className="gutter-row" span={10}>
               <Card imageSource = {products[i + 1].src} imageAlt = {products[i + 1].alt} title = {products[i + 1].title} pageLink = {products[i + 1].pageLink} price = {products[i + 1].price}></Card>
             </Col>
-            <Col className="gutter-row" span={4}>
+            <Col className="gutter-row" span={10}>
               <Card imageSource = {products[i + 2].src} imageAlt = {products[i + 2].alt} title = {products[i + 2].title} pageLink = {products[i + 2].pageLink} price = {products[i + 2].price}></Card>
             </Col>
           </Row>
@@ -53,12 +53,12 @@ const JewelryGrid: React.FC<jewelryGridProps> = ({products}) => {
       productRows.push(
         <div key={products.length}>
           <Row gutter={20} justify = "end">
-            <Col className="name" span={4}>
+            <Col className="name" span={10}>
               <Card imageSource = {products[products.length - 1].src} imageAlt = {products[products.length - 1].alt} title = {products[products.length - 1].title} pageLink = {products[products.length - 1].pageLink} price = {products[products.length - 1].price}></Card>
             </Col>
-            <Col className="gutter-row" span={4}>
+            <Col className="gutter-row" span={10}>
             </Col>
-            <Col className="gutter-row" span={4}>
+            <Col className="gutter-row" span={10}>
             </Col>
           </Row>
         </div>
@@ -69,13 +69,13 @@ const JewelryGrid: React.FC<jewelryGridProps> = ({products}) => {
       productRows.push(
         <div key={products.length - 2}>
           <Row gutter={20} justify = "end">
-            <Col className="name" span={4}>
+            <Col className="name" span={10}>
               <Card imageSource = {products[products.length - 2].src} imageAlt = {products[products.length - 2].alt} title = {products[products.length - 2].title} pageLink = {products[products.length - 2].pageLink} price = {products[products.length - 2].price}></Card>
             </Col>
-            <Col className="gutter-row" span={4}>
+            <Col className="gutter-row" span={10}>
               <Card imageSource = {products[products.length - 1].src} imageAlt = {products[products.length - 1].alt} title = {products[products.length - 1].title} pageLink = {products[products.length - 1].pageLink} price = {products[products.length - 1].price}></Card>
             </Col>
-            <Col className="gutter-row" span={4}>
+            <Col className="gutter-row" span={10}>
             </Col>
           </Row>
         </div>
@@ -87,13 +87,13 @@ const JewelryGrid: React.FC<jewelryGridProps> = ({products}) => {
       productRows.push(
         <div key={i}>
           <Row gutter={20} justify = "end">
-            <Col className="name" span={4}>
+            <Col className="name" span={10}>
               <Card imageSource = {products[i].src} imageAlt = {products[i].alt} title = {products[i].title}  pageLink = {products[i].pageLink} price = {products[i].price}></Card>
             </Col>
-            <Col className="gutter-row" span={4}>
+            <Col className="gutter-row" span={10}>
               <Card imageSource = {products[i + 1].src} imageAlt = {products[i + 1].alt} title = {products[i + 1].title}  pageLink = {products[i + 1].pageLink} price = {products[i + 1].price}></Card>
             </Col>
-            <Col className="gutter-row" span={4}>
+            <Col className="gutter-row" span={10}>
               <Card imageSource = {products[i + 2].src} imageAlt = {products[i + 2].alt} title = {products[i + 2].title}  pageLink = {products[i + 2].pageLink} price = {products[i + 2].price}></Card>
             </Col>
           </Row>

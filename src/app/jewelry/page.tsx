@@ -24,16 +24,31 @@ export default function Jewelry() {
 
   const sorter = (sortKey: string) => {
     const sortedImages = [...jewelryImages];
-    if (sortKey === "2"){
+    if (sortKey === "1"){
+      sortedImages.sort((a, b) => a.title.localeCompare(b.title));
+    }
+    else if (sortKey === "2"){
+      sortedImages.sort((a, b) => b.title.localeCompare(a.title));
+    }
+    else if (sortKey === "3"){
       sortedImages.sort((a, b) => a.price - b.price);
+    }
+    else if (sortKey === "4"){
+      sortedImages.sort((a, b) => b.price - a.price);
     }
     setImages(sortedImages);
   }
   return (
     <div>
       <Navbar></Navbar>
-      <DropdownMenu sortChanger = {sorter}></DropdownMenu>
-      <JewelryGrid products = {jewelryImages}></JewelryGrid>
+      <div className = "flex gap-10">
+        <div className = "pt-4">
+          <DropdownMenu sortChanger = {sorter}></DropdownMenu>
+        </div>  
+        <div>
+          <JewelryGrid products = {jewelryImages}></JewelryGrid>
+        </div> 
+      </div> 
     </div>
   );
 }
