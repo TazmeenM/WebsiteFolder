@@ -11,13 +11,15 @@ import blueGlassBracelet from "./images/blueGlassBracelet.jpg";
 import pinkGlassBracelet from "./images/pinkGlassBracelet.jpg";
 import DropdownMenu from "./components/DropdownMenu";
 import { useState } from "react";
+import ContactInformation from "../components/ContactInformation";
 
 const images = [
   {src: greyPearlBracelet, alt: "Grey Pearl Bracelet", title: "Grey Pearl Bracelet", pageLink: "../jewelry/jewelryPages/greyPearlBracelet", price: 15.00},
   {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet", pageLink: "../jewelry/jewelryPages/creamPearlBracelet", price: 15.00} ,
   {src: creamPearlBraceletWithChains, alt: "Cream Pearl Bracelet With Chains", title: "Cream Pearl Bracelet With Chains", pageLink: "../jewelry/jewelryPages/creamPearlBraceletWithChains", price: 15.00},
   {src: blueGlassBracelet, alt: "Blue Glass Bracelet", title: "Blue Glass Bracelet", pageLink: "../jewelry/jewelryPages/blueGlassBracelet", price: 10.00},
-  {src: pinkGlassBracelet, alt: "Pink Glass Bracelet", title: "Pink Glass Bracelet", pageLink: "../jewelry/jewelryPages/pinkGlassBracelet", price: 10.00}
+  {src: pinkGlassBracelet, alt: "Pink Glass Bracelet", title: "Pink Glass Bracelet", pageLink: "../jewelry/jewelryPages/pinkGlassBracelet", price: 10.00},
+  {src: blueGlassBracelet, alt: "Glass Bracelets", title: "Glass Bracelets", pageLink: "../jewelry/jewelryPages/glassBracelets", price: 18.00},
 ]
 export default function Jewelry() {
   const [jewelryImages, setImages] = useState(images);
@@ -41,14 +43,17 @@ export default function Jewelry() {
   return (
     <div>
       <Navbar></Navbar>
-      <div className = "flex gap-10">
+      <h1 className = "p-4 text-[24px]">Jewelry</h1>
+      <div className = "flex gap-40">
         <div className = "pt-4">
+
           <DropdownMenu sortChanger = {sorter}></DropdownMenu>
         </div>  
         <div>
           <JewelryGrid products = {jewelryImages}></JewelryGrid>
         </div> 
       </div> 
+      <ContactInformation></ContactInformation>
     </div>
   );
 }

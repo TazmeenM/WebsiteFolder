@@ -5,6 +5,8 @@ import ImagesDisplay from "../components/ImagesDisplay"
 import Description from "../components/Description"
 import PageLayout from "../components/PageLayout"
 import creamPearlBracelet from "../../images/creamPearlBracelet.jpg"
+import ContactInformation from "@/app/components/ContactInformation";
+import "../jewelryPages.css";
 
 const images = [
   {imageSource: creamPearlBracelet, imageAlt: "Cream Pearl Bracelet"},
@@ -20,6 +22,7 @@ export default function CreamPearlBracelet() {
   return (
     <>
       <PageLayout images = {images} productName = {productInformation.productName} productDescription = {productInformation.productDescription}></PageLayout>
+      <ContactInformation></ContactInformation>
     </>
   );
 }

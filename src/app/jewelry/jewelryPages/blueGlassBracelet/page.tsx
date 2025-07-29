@@ -5,6 +5,8 @@ import ImagesDisplay from "../components/ImagesDisplay"
 import Description from "../components/Description"
 import PageLayout from "../components/PageLayout"
 import blueGlassBracelet from "../../images/blueGlassBracelet.jpg"
+import ContactInformation from "@/app/components/ContactInformation";
+import "../jewelryPages.css";
 
 const images = [
   {imageSource: blueGlassBracelet, imageAlt: "Blue Glass Bracelet"},
@@ -20,15 +22,7 @@ export default function BlueGlassBracelet() {
   return (
     <>
       <PageLayout images = {images} productName = {productInformation.productName} productDescription = {productInformation.productDescription}></PageLayout>
+      <ContactInformation></ContactInformation>
     </>
-    /*
-    <>
-      <Navbar></Navbar>
-      <div className = "pl-4">  
-        <Description productName = {productInformation.productName} productDescription = {productInformation.productDescription}></Description>
-        <ImagesDisplay images = {images}></ImagesDisplay>
-      </div>
-    </>
-    */
   );
 }

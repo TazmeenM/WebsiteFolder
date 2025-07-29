@@ -4,22 +4,22 @@ import Navbar from "../../../components/Navbar"
 import ImagesDisplay from "../components/ImagesDisplay"
 import Description from "../components/Description"
 import PageLayout from "../components/PageLayout"
-import greyPearlBracelet from "../../images/greyPearlBracelet.jpg"
-import greyPearlBracelet2 from "../../images/greyPearlBracelet2.jpg"
+import blueGlassBracelet from "../../images/blueGlassBracelet.jpg"
+import pinkGlassBracelet from "../../images/pinkGlassBracelet.jpg"
 import ContactInformation from "@/app/components/ContactInformation";
 import "../jewelryPages.css";
 
 const images = [
-  {imageSource: greyPearlBracelet, imageAlt: "Grey Pearl Bracelet"},
-  {imageSource: greyPearlBracelet2, imageAlt: "Grey Pearl Bracelet"}
+  {imageSource: blueGlassBracelet, imageAlt: "Blue Glass Bracelet"},
+  {imageSource: pinkGlassBracelet, imageAlt: "Pink Glass Bracelet"}
 ]
 
 const productInformation = {
-  productName: "Grey Pearl Bracelet", 
-  productDescription: "A grey pearl bracelet"
+  productName: "Glass Bracelets", 
+  productDescription: "Glass Bracelets in blue and pink. Set of 2."
 }
 
-export default function GreyPearlBracelet() {
+export default function GlassBracelets() {
   return (
     <>
       <PageLayout images = {images} productName = {productInformation.productName} productDescription = {productInformation.productDescription}></PageLayout>
