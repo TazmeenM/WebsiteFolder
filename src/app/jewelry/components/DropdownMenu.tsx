@@ -6,7 +6,7 @@ import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd';
 
 interface DropdownMenuProps {
-  sortChanger: (sortKey: string) => void;  // Callback to handle sorting
+  sortChanger: (sortKey: string) => void;
 }
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({sortChanger}) => {

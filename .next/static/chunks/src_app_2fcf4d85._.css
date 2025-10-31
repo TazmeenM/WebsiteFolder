@@ -15,10 +15,26 @@
 
 @layer theme {
   :root, :host {
+    --color-blue-800: #193cb8;
+    --color-blue-900: #1c398e;
     --color-white: #fff;
     --spacing: .25rem;
     --default-font-family: var(--font-geist-sans);
     --default-mono-font-family: var(--font-geist-mono);
+  }
+
+  @supports (color: color(display-p3 0 0 0)) {
+    :root, :host {
+      --color-blue-800: color(display-p3 .134023 .230647 .695537);
+      --color-blue-900: color(display-p3 .136395 .219428 .537145);
+    }
+  }
+
+  @supports (color: lab(0% 0 0)) {
+    :root, :host {
+      --color-blue-800: lab(30.2514% 27.7854 -70.2699);
+      --color-blue-900: lab(26.1542% 15.7545 -51.5504);
+    }
   }
 }
 
@@ -403,6 +419,10 @@
     border-width: 1px;
   }
 
+  .bg-white {
+    background-color: var(--color-white);
+  }
+
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -433,6 +453,14 @@
 
   .text-\[24px\] {
     font-size: 24px;
+  }
+
+  .text-blue-800 {
+    color: var(--color-blue-800);
+  }
+
+  .text-blue-900 {
+    color: var(--color-blue-900);
   }
 
   .antialiased {
@@ -533,10 +561,26 @@ body {
 
 @layer theme {
   :root, :host {
+    --color-blue-800: #193cb8;
+    --color-blue-900: #1c398e;
     --color-white: #fff;
     --spacing: .25rem;
     --default-font-family: var(--font-geist-sans);
     --default-mono-font-family: var(--font-geist-mono);
+  }
+
+  @supports (color: color(display-p3 0 0 0)) {
+    :root, :host {
+      --color-blue-800: color(display-p3 .134023 .230647 .695537);
+      --color-blue-900: color(display-p3 .136395 .219428 .537145);
+    }
+  }
+
+  @supports (color: lab(0% 0 0)) {
+    :root, :host {
+      --color-blue-800: lab(30.2514% 27.7854 -70.2699);
+      --color-blue-900: lab(26.1542% 15.7545 -51.5504);
+    }
   }
 }
 
@@ -942,6 +986,10 @@ body {
     border-width: 1px;
   }
 
+  .bg-white {
+    background-color: var(--color-white);
+  }
+
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -972,6 +1020,14 @@ body {
 
   .text-\[24px\] {
     font-size: 24px;
+  }
+
+  .text-blue-800 {
+    color: var(--color-blue-800);
+  }
+
+  .text-blue-900 {
+    color: var(--color-blue-900);
   }
 
   .antialiased {

@@ -19,16 +19,10 @@ interface productInformation{
 }
 
 interface jewelryGridProps{
-}
+  products: productInformation[]
+}[];
 
-const JewelryGrid: React.FC<jewelryGridProps> = ({}) => {
-  const products = jewelryInformation.map((product) => ({
-    src: product.images[0].source,
-    alt: product.images[0].alt,
-    title:product.name,
-    price: product.price,
-    pageLink: `/jewelry/${product.id}`
-  }));
+const JewelryGrid: React.FC<jewelryGridProps> = ({products}) => {
   const productRows = [];
     for (let i = 0; i < products.length; i+=3){
       productRows.push(

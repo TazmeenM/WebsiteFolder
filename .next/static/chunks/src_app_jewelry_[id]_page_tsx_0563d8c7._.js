@@ -8,7 +8,7 @@
   "static/chunks/node_modules_@ant-design_cssinjs_es_f6be422e._.js",
   "static/chunks/node_modules_5824f161._.js",
   "static/chunks/src_app_be55694c._.js",
-  "static/chunks/src_app_components_navbar_ad86aba0.css"
+  "static/chunks/src_app_1a5cecd5._.css"
 ],
     source: "dynamic"
 });

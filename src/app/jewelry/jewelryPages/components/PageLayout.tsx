@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Navbar from "../../../components/Navbar"
 import ImagesDisplay from "../components/ImagesDisplay"
 import Description from "../components/Description"
+import "../../jewelry.css"
 
 interface PageLayoutProps{
     images: {imageSource: string | StaticImageData, imageAlt: string}[];
@@ -13,7 +14,7 @@ export default function PageLayout({images, productName, productDescription}: Pa
   return (
     <>
       <Navbar></Navbar>
-      <div className = "pl-8 pt-4 pb-40 flex flex-row gap-20">  
+      <div className = "page-layout pl-8 pt-4 pb-40 flex flex-row gap-20">  
         <ImagesDisplay images = {images}></ImagesDisplay>
         <Description productName = {productName} productDescription = {productDescription}></Description>
       </div>

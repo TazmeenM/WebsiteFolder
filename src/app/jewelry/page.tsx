@@ -1,7 +1,8 @@
 'use client';
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Navbar from "../components/Navbar"
 import JewelryGrid from "./components/JewelryGrid";
+import jewelryInformation from "../data/jewelryInformation.json"
 
 //For the images
 import greyPearlBracelet from "./images/greyPearlBracelet.jpg"
@@ -13,16 +14,24 @@ import DropdownMenu from "./components/DropdownMenu";
 import { useState } from "react";
 import ContactInformation from "../components/ContactInformation";
 
-const images = [
-  {src: greyPearlBracelet, alt: "Grey Pearl Bracelet", title: "Grey Pearl Bracelet", pageLink: "../jewelry/jewelryPages/greyPearlBracelet", price: 15.00},
-  {src: creamPearlBracelet, alt: "Cream Pearl Bracelet", title: "Cream Pearl Bracelet", pageLink: "../jewelry/jewelryPages/creamPearlBracelet", price: 15.00} ,
-  {src: creamPearlBraceletWithChains, alt: "Cream Pearl Bracelet With Chains", title: "Cream Pearl Bracelet With Chains", pageLink: "../jewelry/jewelryPages/creamPearlBraceletWithChains", price: 15.00},
-  {src: blueGlassBracelet, alt: "Blue Glass Bracelet", title: "Blue Glass Bracelet", pageLink: "../jewelry/jewelryPages/blueGlassBracelet", price: 10.00},
-  {src: pinkGlassBracelet, alt: "Pink Glass Bracelet", title: "Pink Glass Bracelet", pageLink: "../jewelry/jewelryPages/pinkGlassBracelet", price: 10.00},
-  {src: blueGlassBracelet, alt: "Glass Bracelets", title: "Glass Bracelets", pageLink: "../jewelry/jewelryPages/glassBracelets", price: 18.00},
-]
+interface productInformation{
+    src: string;
+    alt: string
+    title: string
+    pageLink: string
+    price: number
+}
+
 export default function Jewelry() {
-  const [jewelryImages, setImages] = useState(images);
+  const products: productInformation[] = jewelryInformation.map((product) => ({
+    src: product.images[0].source,
+    alt: product.images[0].alt,
+    title:product.name,
+    price: product.price,
+    pageLink: `/jewelry/${product.id}`
+  }));
+
+  const [jewelryImages, setImages] = useState(products);
 
   const sorter = (sortKey: string) => {
     const sortedImages = [...jewelryImages];
