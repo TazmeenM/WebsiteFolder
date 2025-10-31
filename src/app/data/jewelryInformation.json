@@ -6,11 +6,11 @@
         "price": 15,
         "images": [
             {
-                "source": "/jewelry/images/greyPearlBracelet", 
+                "source": "/images/greyPearlBracelet.jpg", 
                 "alt": "A grey pearl bracelet"
             },
             {
-                "source": "./jewelry/images/greyPearlBracelet2", 
+                "source": "/images/greyPearlBracelet2.jpg", 
                 "alt": "A grey pearl bracelet"
             }
         ]
@@ -23,7 +23,7 @@
         "price": 15,
         "images": [
             {
-                "source": "/jewelry/images/creamPearlBracelet",
+                "source": "/images/creamPearlBracelet.jpg",
                 "alt": "A cream pearl bracelet"
             }
         ]
@@ -36,7 +36,7 @@
         "price": 15,
         "images": [
             {
-                "source": "/jewelry/images/creamPearlBraceletWithChains",
+                "source": "/images/creamPearlBraceletWithChains.jpg",
                 "alt": "a cream pearl bracelet with chains"
             }
         ]
@@ -49,7 +49,7 @@
         "price": 10,
         "images": [
             {
-                "source": "/jewelry/images/blueGlassBracelet",
+                "source": "/images/blueGlassBracelet.jpg",
                 "alt": "A blue glass bracelet"
             }
         ]
@@ -62,7 +62,7 @@
         "price": 10,
         "images": [
             {
-                "source": "/jewelry/images/pinkGlassBracelet",
+                "source": "/images/pinkGlassBracelet.jpg",
                 "alt": "A pink glass bracelet"
             }
         ]
@@ -75,11 +75,28 @@
         "price": 20,
         "images": [
             {
-                "source": "/jewelry/images/blueGlassBracelet",
+                "source": "/images/blueGlassBracelet.jpg",
                 "alt": "A blue glass bracelet"
             },
             {
-                "source": "/jewelry/images/pinkGlassBracelet",
+                "source": "/images/pinkGlassBracelet.jpg",
+                "alt": "A pink glass bracelet"
+            }
+        ]
+    },
+
+    {
+        "id": "testing",
+        "name": "Testing",
+        "description": "Testing",
+        "price": 20,
+        "images": [
+            {
+                "source": "/images/blueGlassBracelet.jpg",
+                "alt": "A blue glass bracelet"
+            },
+            {
+                "source": "/images/pinkGlassBracelet.jpg",
                 "alt": "A pink glass bracelet"
             }
         ]

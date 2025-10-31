@@ -1,5 +1,6 @@
+"use client";
 import jewelry from "../../../data/jewelryInformation.json"
-import {useParams} from "react-router-dom"
+import {useParams} from "next/navigation"
 import PageLayout from  "./PageLayout"
 
 interface JewelryProps{
