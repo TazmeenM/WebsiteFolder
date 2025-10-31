@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/jewelry/[id]/page": "app/jewelry/[id]/page.js",
+  "/jewelry/jewelryPages/glassBracelets/page": "app/jewelry/jewelryPages/glassBracelets/page.js",
+  "/jewelry/jewelryPages/greyPearlBracelet/page": "app/jewelry/jewelryPages/greyPearlBracelet/page.js",
+  "/jewelry/page": "app/jewelry/page.js",
+  "/page": "app/page.js"
+}

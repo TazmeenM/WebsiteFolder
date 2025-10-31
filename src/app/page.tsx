@@ -5,6 +5,7 @@ import CarouselBuilder from "./components/CarouselBuilder";
 import Navbar from "./components/Navbar";
 import "./home.css";
 import ContactInformation from "./components/ContactInformation";
+import JewelryPageCreator from "./jewelry/jewelryPages/components/JewelryPageCreator";
 
 export default function Home() {
   return (

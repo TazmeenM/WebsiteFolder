@@ -3,13 +3,7 @@ import React from 'react';
 import { Col, Divider, Row } from 'antd';
 import Card from "./Card"
 import "../../globals.css";
-
-//Importing the images
-import greyPearlBracelet from "../images/greyPearlBracelet.jpg"
-import creamPearlBracelet from "../images/creamPearlBracelet.jpg"
-import creamPearlBraceletWithChains from "../images/creamPearlBraceletWithChains.jpg";
-import blueGlassBracelet from "../images/blueGlassBracelet.jpg";
-import pinkGlassBracelet from "../images/pinkGlassBracelet.jpg";
+import jewelryInformation from "../../data/jewelryInformation.json"
 
 
 const style: React.CSSProperties = { 
@@ -17,7 +11,6 @@ const style: React.CSSProperties = {
 };
 
 interface productInformation{
-    //For the image
     src: string | StaticImageData;
     alt: string
     title: string
@@ -26,10 +19,16 @@ interface productInformation{
 }
 
 interface jewelryGridProps{
-  products: productInformation[];
 }
 
-const JewelryGrid: React.FC<jewelryGridProps> = ({products}) => {
+const JewelryGrid: React.FC<jewelryGridProps> = ({}) => {
+  const products = jewelryInformation.map((product) => ({
+    src: product.images[0].source,
+    alt: product.images[0].alt,
+    title:product.name,
+    price: product.price,
+    pageLink: `/jewelry/${product.id}`
+  }));
   const productRows = [];
     for (let i = 0; i < products.length; i+=3){
       productRows.push(
